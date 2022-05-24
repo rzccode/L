@@ -1,0 +1,40 @@
+<!--
+ * @Author: lyc
+ * @Date: 2022-05-24 21:57:54
+ * @LastEditors: lyc
+ * @LastEditTime: 2022-05-24 23:05:36
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 出入校：<input type="text" id="io"><span style="color: red;">
+  按格式：出/入
+</span><br> 
+  姓名：<input type="text" id="name"><br>
+  时间：<input type="text" id="time"><br>
+  <span style="color: red;">
+    按格式：05-23 18:34
+  </span><br>
+  学号：<input type="text" id="card"><br>
+  <button onclick="handleButton()">生成</button>
+  <script>
+    function handleButton(){
+      var io = document.getElementById("io").value
+      var name = document.getElementById("name").value
+      var time = document.getElementById("time").value
+      var card = document.getElementById("card").value
+      // localStorage.setItem("io",io)
+      // localStorage.setItem("time",time)
+      // localStorage.setItem("name",name)
+      window.location.href="./test.html?io="+io+"&name="+name+"&time="+time+"&card="+card
+    }
+  </script>
+</body>
+</html>
